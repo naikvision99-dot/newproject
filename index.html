@@ -1,0 +1,2500 @@
+<!doctype html>
+<html lang="en">s
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="canonical" href="https://naikvision.github.io/naikvision/">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <title>NaikVision - MS Word, Excel, Photoshop & Website Design Course in Hindi</title>
+  <meta name="description" content="NaikVision par seekhiye Computer Course, MS Word, MS Excel, PowerPoint, Photoshop aur Website Design Hindi me. Free PDF Download aur Practical Training available.">
+
+<meta name="keywords" content="Computer course, MS Word, MS Excel, PowerPoint, Photoshop, Website design, PDF download, NaikVision">
+
+<meta name="author" content="NaikVision">
+<meta name="robots" content="index, follow">
+
+<!-- Open Graph for Social Media -->
+<meta property="og:title" content="NaikVision - Computer & Software Learning Platform">
+<meta property="og:description" content="Learn MS Word, Excel, Photoshop & Website Design in Hindi. Free PDF Available.">
+<meta property="og:image" content="https://naikvision.github.io/naikvision/preview.jpg">
+<meta property="og:url" content="https://naikvision.github.io/naikvision/">
+<meta property="og:type" content="website">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    :root {
+      --accent: #0a66c2;
+      --accent-contrast: #fff;
+      --glass: rgba(255, 255, 255, 0.1);
+    }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: url('https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;
+      color: white;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    header {
+      background: rgba(0, 0, 0, 0.5);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 20px;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      flex-wrap: wrap;
+    }
+
+    /* --- Nayi Animated Line ka CSS --- */
+    .animated-line {
+      height: 4px;
+      width: 100%;
+      background: linear-gradient(90deg, #ff0000, #ffcc00, #00ff00, #00ffff, #0000ff, #ff00ff, #ff0000);
+      background-size: 300% 100%;
+      animation: moveLine 10s linear infinite;
+      position: sticky;
+      top: 60px; /* Header ke niche chipke rehne ke liye */
+      z-index: 9;
+    }
+    @keyframes moveLine {
+      0% { background-position: 0% 0%; }
+      100% { background-position: 300% 0%; }
+    }
+    /* --------------------------------- */
+
+    header img {
+      height: 40px;
+      width: 40px;
+      border-radius: 50%;
+      margin-right: 10px;
+    }
+    header .logo {
+      display: flex;
+      align-items: center;
+      font-weight: bold;
+      font-size: 20px;
+      color: white;
+    }
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+    }
+    nav ul li {
+      position: relative;
+    }
+    nav ul li a {
+      display: block;
+      padding: 10px 2px;
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    nav ul li:hover > a {
+      background: var(--accent);
+    }
+    nav ul li ul {
+      display: none;
+      position: absolute;
+      background: rgba(0, 0, 0, 0.8);
+      top: 100%;
+      left: 0;
+      min-width: 220px;
+      z-index: 20;
+    }
+    nav ul li:hover ul {
+      display: block;
+    }
+    nav ul li ul li a {
+      padding: 5px;
+      transition: background 0.3s, color 0.3s;
+    }
+    nav ul li ul li a:hover {
+      background: red;
+      color: white;
+    }
+    nav i {
+      margin-right: 10px;
+      color: #ffcc00;
+    }
+
+    #general-shorts-menu {
+      display: none; 
+      background: rgba(30, 30, 30, 0.95);
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      position: absolute;
+      left: 100%;
+      top: 0;
+      min-width: 200px;
+    }
+    #general-shorts-menu li a {
+      padding-left: 10px;
+      font-size: 5px;
+      border-left: 3px solid #ffcc00;
+    }
+
+    .search-login {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .google-search {
+      display: flex;
+      align-items: center;
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 5px;
+      padding: 2px 5px;
+    }
+    .google-search input {
+      padding: 5px 10px;
+      border: none;
+      background: transparent;
+      color: white;
+      outline: none;
+    }
+    .google-search input::placeholder {
+      color: #ddd;
+    }
+    .google-search button {
+      background: none !important;
+      padding: 5px !important;
+      color: #ffcc00 !important;
+    }
+
+    .search-login button {
+      background: var(--accent);
+      color: var(--accent-contrast);
+      border: none;
+      padding: 6px 12px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 14px;
+      transition: background 0.3s;
+    }
+    .search-login button:hover {
+      background: #084a91;
+    }
+
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.7);
+      z-index: 100;
+      justify-content: center;
+      align-items: center;
+    }
+    .modal-content {
+      background: rgba(0, 0, 0, 0.8);
+      padding: 20px;
+      border-radius: 10px;
+      max-width: 400px;
+      width: 90%;
+      position: relative;
+      color: white;
+    }
+    .modal-content h2 {
+      margin-top: 0;
+      font-size: 24px;
+      text-align: center;
+    }
+    .modal-content input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: none;
+      border-radius: 5px;
+      background: rgba(255, 255, 255, 0.1);
+      color: white;
+    }
+    .modal-content input::placeholder {
+      color: #ccc;
+    }
+    .modal-content button {
+      width: 100%;
+      background: var(--accent);
+      color: var(--accent-contrast);
+      border: none;
+      padding: 10px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    .modal-content button:hover {
+      background: #084a91;
+    }
+    .modal-content .close {
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      font-size: 24px;
+      cursor: pointer;
+      color: white;
+    }
+    .modal-content .switch-form {
+      text-align: center;
+      margin-top: 15px;
+    }
+    .modal-content .switch-form a {
+      color: #4db8ff;
+      text-decoration: none;
+    }
+    .modal-content .switch-form a:hover {
+      text-decoration: underline;
+    }
+
+    main {
+      padding: 20px;
+      text-align: center;
+      flex-grow: 1;
+    }
+    .contact-section {
+      background: rgba(0, 0, 0, 0.6);
+      padding: 40px 20px;
+      border-top: 2px solid var(--accent);
+      border-bottom: 2px solid var(--accent);
+      text-align: center;
+    }
+    .contact-section h2 {
+      color: #fff;
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+    .contact-info {
+      margin-bottom: 25px;
+      font-size: 16px;
+      line-height: 1.6;
+    }
+    .contact-info a {
+      color: #4db8ff;
+      text-decoration: none;
+    }
+    .contact-form {
+      max-width: 500px;
+      margin: 0 auto 30px;
+      text-align: left;
+    }
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      margin-bottom: 15px;
+    }
+    .contact-form button {
+      width: 100%;
+      background: var(--accent);
+      color: white;
+      border: none;
+      padding: 10px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    .contact-form button:hover {
+      background: #084a91;
+    }
+    .map-container {
+      margin-top: 20px;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    .map-container iframe {
+      width: 100%;
+      height: 250px;
+      border: none;
+    }
+    footer {
+      background: rgba(0, 0, 0, 0.6);
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+    }
+    footer .social-icons a {
+      margin: 0 10px;
+      color: white;
+      text-decoration: none;
+      font-size: 22px;
+      transition: color 0.3s;
+    }
+    footer .social-icons a:hover {
+      color: var(--accent);
+    }
+
+    .gallery-section {
+      background: rgba(0, 0, 0, 0.6);
+      padding: 40px 20px;
+      border-top: 2px solid var(--accent);
+      border-bottom: 2px solid var(--accent);
+      text-align: center;
+    }
+    .gallery-section h2 {
+      font-size: 28px;
+      margin-bottom: 30px;
+      color: #fff;
+    }
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .gallery-item {
+      overflow: hidden;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+      transition: transform 0.3s;
+    }
+    .gallery-item:hover {
+      transform: scale(1.05);
+    }
+    .gallery-item img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      display: block;
+    }
+    .gallery-item .caption {
+      padding: 10px;
+      background: rgba(0,0,0,0.7);
+      font-size: 14px;
+    }
+
+    @media (max-width: 768px) {
+      nav ul {
+        flex-direction: column;
+        background: rgba(0, 0, 0, 0.8);
+        width: 100%;
+        display: none;
+      }
+      nav.active ul {
+        display: flex;
+      }
+      #general-shorts-menu {
+        position: relative;
+        left: 0;
+      }
+      .menu-toggle {
+        display: block;
+        cursor: pointer;
+        padding: 10px;
+        color: white;
+        font-size: 20px;
+      }
+      .search-login {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      .search-login button {
+        padding: 5px 8px;
+        font-size: 12px;
+      }
+      .gallery-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    @media (min-width: 769px) {
+      .menu-toggle {
+        display: none;
+      }
+    }
+
+
+    /* Sabhi side dropdowns ke liye ek hi CSS */
+.side-dropdown {
+  display: none; 
+  background: rgba(30, 30, 30, 0.95);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  left: 100%; /* Side mein khulne ke liye */
+  top: 0;
+  min-width: 200px;
+  border-left: 2px solid var(--accent);
+  z-index: 100;
+}
+
+.side-dropdown li a {
+  padding-left: 15px !important;
+  font-size: 13px !important;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+/* Hover effect for submenus */
+.has-submenu:hover > a {
+  background: var(--accent);
+}
+
+
+
+
+    /* Sabhi side dropdowns ke liye ek hi CSS */
+.side-dropdown {
+  display: none; 
+  background: rgba(30, 30, 30, 0.95);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  left: 100%; /* Side mein khulne ke liye */
+  top: 0;
+  min-width: 200px;
+  border-left: 2px solid var(--accent);
+  z-index: 100;
+}
+
+.side-dropdown li a {
+  padding-left: 15px !important;
+  font-size: 13px !important;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+/* Hover effect for submenus */
+.has-submenu:hover > a {
+  background: var(--accent);
+}
+
+
+.notice-bar {
+  width: 100%;
+  background: rgba(255, 0, 0, 0.8);
+  color: white;
+  padding: 6px 0;
+  overflow: hidden;
+  position: relative;
+  font-weight: bold;
+}
+    .notice-text {
+  display: inline-block;
+  white-space: nowrap;
+  animation: scrollNotice 90s linear infinite;
+  padding-left: 80%;
+}
+    @keyframes scrollNotice {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+  .logo-notice {
+  overflow: hidden;
+  white-space: nowrap;
+  width: 1100px;
+  margin-left: 15px;
+  position: relative;
+}
+
+.logo-notice span {
+  display: inline-block;
+  padding-left: 100%;
+  animation: logoScroll 50s linear infinite;
+  font-size: 14px;
+  color: #ffcc00;
+}
+
+@keyframes logoScroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
+}
+     
+  
+
+  
+  
+
+.about-content h2 {
+  color: var(--accent);
+  margin-bottom: 15px;
+}
+
+
+        /* Navbar */
+.navbar{
+    background:;
+    padding:15px;
+    position:relative;
+}
+
+.navbar a{
+    color:white;
+    text-decoration:none;
+    padding:10px 20px;
+    cursor:pointer;
+}
+
+/* Dropdown */
+.dropdown{
+    display:none;
+    position:absolute;
+    background:#333;
+    top:60px;
+    left:15px;
+}
+
+.dropdown a{
+    display:block;
+    padding:10px 20px;
+    color:white;
+}
+
+.dropdown a:hover{
+    background:red;
+}
+
+/* Side Panel */
+.side-panel{
+    position:fixed;
+    top:0;
+    right:-100%;
+    width:80%;
+    height:100%;
+    background:#f4f4f4;
+    overflow-y:auto;
+    transition:0.5s;
+    padding:20px;
+    z-index:1000;
+}
+
+/* Gallery Grid */
+.gallery{
+    display:none;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap:15px;
+}
+
+.gallery img,
+.gallery video{
+    width:100%;
+    height:200px;
+    object-fit:cover;
+    border-radius:8px;
+}
+
+/* Close Button */
+.close-btn{
+    background:red;
+    color:white;
+    padding:8px 15px;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+    margin-bottom:20px;
+}
+       #contact-form {
+  text-align: center;
+  padding: 40px;
+}
+
+#contact {
+  text-align: center;
+  padding: 40px;
+}
+
+#contact input,
+#contact textarea {
+  width: 80%;
+  max-width: 400px;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#contact button {
+  padding: 10px 20px;
+  background: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#contact button:hover {
+  background: #218838;
+}      
+
+        .footer {
+  background: #000;
+  color: #fff;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.footer-box {
+  width: 250px;
+  margin: 15px;
+}
+
+.footer-box h3 {
+  margin-bottom: 15px;
+  border-bottom: 2px solid #444;
+  padding-bottom: 5px;
+}
+
+.footer-box ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-box ul li {
+  margin: 8px 0;
+}
+
+.footer-box ul li a {
+  color: #ccc;
+  text-decoration: none;
+}
+
+.footer-box ul li a:hover {
+  color: #fff;
+}
+
+.social-icons a {
+  font-size: 22px;
+  margin: 5px;
+  text-decoration: none;
+}
+
+.footer-bottom {
+  margin-top: 30px;
+  border-top: 1px solid #333;
+  padding-top: 15px;
+  font-size: 14px;
+}
+
+/* Slider */
+.slider {
+  width: 300px;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+}
+
+.slide {
+  display: none;
+  width: 100%;
+  border-radius: 10px;
+}
+
+.active {
+  display: block;
+}        
+
+
+       .pro-footer {
+  position: relative;
+  color: white;
+  overflow: hidden;
+}
+
+/* Video */
+.bg-video {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -2;
+}
+
+/* Overlay */
+.footer-overlay {
+  background: linear-gradient(45deg, rgba(0,0,0,0.9), rgba(0,0,0,0.8));
+  padding: 40px 20px;
+  text-align: center;
+}
+
+/* Animated Gradient Border */
+.footer-box {
+  width: 250px;
+  margin: 15px;
+  padding: 15px;
+  background: rgba(0,0,0,0.6);
+  border-radius: 15px;
+  transition: 0.4s;
+}
+
+.footer-box:hover {
+  transform: rotateY(10deg) scale(1.05);
+  box-shadow: 0 0 20px cyan;
+}
+
+/* Layout */
+.footer-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+/* Ticker */
+.ticker {
+  overflow: hidden;
+  white-space: nowrap;
+  margin-bottom: 20px;
+}
+.ticker-text {
+  display: inline-block;
+  animation: scroll 15s linear infinite;
+}
+@keyframes scroll {
+  from { transform: translateX(100%); }
+  to { transform: translateX(-100%); }
+}
+
+/* Slider */
+.slider {
+  width: 1000px;
+  margin: auto;
+}
+.slide {
+  display: none;
+  width: 100%;
+  border-radius: 15px;
+}
+.active { display: block; }
+
+/* Form */
+input, textarea {
+  width: 100%;
+  padding: 6px;
+  margin: 5px 0;
+  border-radius: 5px;
+  border: none;
+}
+button {
+  width: 100%;
+  padding: 8px;
+  background: cyan;
+  border: none;
+  cursor: pointer;
+}
+button:hover { background: deepskyblue; }
+
+/* FAQ */
+.faq-content { display:none; background:#111; padding:5px; }
+
+/* Social */
+.social a {
+  font-size: 22px;
+  margin: 10px;
+  color: #bbb;
+  transition: 0.3s;
+}
+.social a:hover {
+  color: cyan;
+  transform: scale(1.3);
+}
+
+/* Bottom */
+.bottom {
+  margin-top: 20px;
+  border-top: 1px solid #333;
+  padding-top: 10px;
+}
+
+/* Scroll Reveal */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: 1s;
+}
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Responsive */
+@media(max-width:768px){
+  .footer-container{
+    flex-direction: column;
+    align-items: center;
+  }
+  .slider{
+    width:90%;
+  }
+}          .luxury-video-strip {
+  overflow: hidden;
+  background: #000;
+  padding: 40px 0;
+}
+
+.luxury-track {
+  display: flex;
+  gap: 30px;
+  animation: luxuryScroll 40s linear infinite;
+}
+
+.luxury-box {
+  width: 260px;
+  height: 160px;
+  padding: 3px;
+  border-radius: 15px;
+  background: linear-gradient(45deg, #d4af37, #ffd700, #b8860b);
+  background-size: 300% 300%;
+  animation: goldGlow 5s ease infinite;
+  box-shadow: 0 0 20px rgba(212,175,55,0.5);
+}
+
+.luxury-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+  transition: 0.5s;
+}
+
+.luxury-box:hover img {
+  transform: scale(1.08);
+}
+
+.luxury-box:hover {
+  box-shadow: 0 0 30px gold;
+}
+
+/* Gold border animation */
+@keyframes goldGlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Smooth cinematic scroll */
+@keyframes luxuryScroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-100%); }
+}
+
+/* Pause on hover */
+.luxury-track:hover {
+  animation-play-state: paused;
+}     
+        .slider{
+    width:320px;
+    margin:50px auto;
+    background:#fff;
+    padding:10px;
+    border-radius:10px;
+    text-align:center;
+}
+.slider img{
+    width:300px;
+    height:200px;
+    display:none;
+    border-radius:6px;
+}
+.slider img.active{
+    display:block;
+}
+button{
+    padding:6px 12px;
+    margin:5px;
+    cursor:pointer;
+}
+         .pro-footer {
+  background: #0f172a;
+  color: #fff;
+  padding: 50px 20px 20px;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.footer-wrapper {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.footer-faq, .footer-nav {
+  flex: 1;
+  min-width: 300px;
+}
+
+.pro-footer h3 {
+  font-size: 22px;
+  margin-bottom: 15px;
+  border-left: 4px solid #38bdf8;
+  padding-left: 10px;
+}
+
+.faq-item {
+  margin-bottom: 10px;
+}
+
+.faq-question {
+  width: 50%;
+  background: #1e293b;
+  color: #fff;
+  padding: 14px;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  font-size: 15px;
+  border-radius: 4px;
+}
+
+.faq-question:hover {
+  background: #334155;
+}
+
+.faq-answer {
+  display: none;
+  background: #020617;
+  padding: 12px;
+  font-size: 14px;
+  color: #cbd5f5;
+}
+
+.icon {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.footer-nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-nav ul li {
+  margin-bottom: 10px;
+}
+
+.footer-nav ul li a {
+  text-decoration: none;
+  color: #cbd5f5;
+  transition: 0.3s;
+}
+
+.footer-nav ul li a:hover {
+  color: #38bdf8;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 13px;
+  color: #94a3b8;
+}
+
+/* Mobile Friendly */
+@media (max-width: 768px) {
+  .footer-wrapper {
+    flex-direction: column;
+  }
+}
+
+
+      .modal{
+  display:none;
+  position:fixed;
+  top:0; left:0;
+  width:100%; height:100%;
+  background:rgba(0,0,0,0.6);
+  justify-content:center;
+  align-items:center;
+}
+.modal-content{
+  background:black;
+  padding:30px;
+  border-radius:10px;
+  width:300px;
+  text-align:center;
+}
+.modal-content input{
+  width:100%;
+  padding:10px;
+  margin:8px 0;
+}
+.close{
+  float:right;
+  cursor:pointer;
+  font-size:20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+</style>
+
+<script>
+let slides = document.querySelectorAll(".slide");
+let index = 0;
+
+function showSlide() {
+  slides.forEach(slide => slide.classList.remove("active"));
+  slides[index].classList.add("active");
+  index = (index + 1) % slides.length;
+}
+
+setInterval(showSlide, 3000);
+</script>
+  </style>
+</head>
+<body>
+  
+  <header>
+   
+    <div class="logo style="display:flex;align-items:center;gap:10px;">
+      <img src="https://naikvision.github.io/naikvision/image.logo.png" height="60">
+
+      
+    </div>
+        <div class="logo-notice">
+      <span>📢 नाइकविजन चैनल हर विषय पर वीडियो बनाने से पहले गहराई से शोध करता है। हम अपने दर्शकों तक केवल सत्यापित और सही जानकारी ही पहुँचाते हैं। हमारा उद्देश्य गुणवत्तापूर्ण और भरोसेमंद सामग्री प्रदान करना है।
+
+— (टीम नाइकविजन)     NAIKVISION Channel conducts deep research before creating content on any topic. We provide only verified and accurate information to our viewers. Our goal is to deliver quality and trustworthy content.
+
+{— Team NAIKVISION}</span>
+    </div>
+        
+
+    <div class="menu-toggle" onclick="toggleMenu()">☰ Menu</div>
+
+    
+    <nav id="navbar">
+      <ul>
+        <li><a href="#" onclick="loadPage('home')"><i class="fa-solid fa-house"></i>Home</a></li>
+
+        <li><a href="#"><i class="fa-solid fa-video"></i>Videos▾<i class=""></i></a>
+  <ul>
+    <li class="has-submenu"> 
+      <a href="javascript:void(0)" onclick="toggleSubMenu('general-menu')">
+        <i class="fa-solid fa-play-circle"></i> Top videos 
+        <i class="fa-solid fa-caret-right" style="float:right; margin-top:5px;"></i>
+      </a>
+      <ul id="general-menu" class="side-dropdown">
+        <li><a href="https://www.youtube.com/shorts/l_snjUH-sq0?feature=share"><i class="fa-solid fa-comment-dots icon"></i>How to on auto word suggestion</a></li>
+        <li><a href="#"><i class="fa-solid fa-bolt"></i>ms word tranparncy effect</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>excel heding row freeze</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>excel coloum position change</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li>
+
+      </ul>
+    </li>
+
+    <li class="has-submenu"> 
+      <a href="javascript:void(0)" onclick="toggleSubMenu('msword-menu')">
+        <i class="fa-solid fa-file-word"></i> MS Word 
+        <i class="fa-solid fa-caret-right" style="float:right; margin-top:5px;"></i>
+      </a>
+      <ul id="msword-menu" class="side-dropdown">
+        <li><a href=""><i class="fa-solid fa-bolt"></i>i card 1</a></li><li><a href=""><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li>
+      </ul>
+    </li>
+
+    <li class="has-submenu"> 
+      <a href="javascript:void(0)" onclick="toggleSubMenu('msexcel-menu')">
+        <i class="fa-solid fa-file-excel"></i> MS Excel 
+        <i class="fa-solid fa-caret-right" style="float:right; margin-top:5px;"></i>
+      </a>
+      <ul id="msexcel-menu" class="side-dropdown">
+        <li><a href="#"><i class="fa-solid fa-bolt"></i>Excel Formulas</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li>
+      </ul>
+    </li>
+
+    <li class="has-submenu"> 
+      <a href="javascript:void(0)" onclick="toggleSubMenu('pp-menu')">
+        <i class="fa-solid fa-file-powerpoint"></i> Power Point 
+        <i class="fa-solid fa-caret-right" style="float:right; margin-top:5px;"></i>
+      </a>
+      <ul id="pp-menu" class="side-dropdown">
+        <li><a href="#"><i class="fa-solid fa-bolt"></i>PPT Design</a></li>
+        <li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li>
+      </ul>
+    </li>
+
+    <li class="has-submenu"> 
+      <a href="javascript:void(0)" onclick="toggleSubMenu('ps-menu')">
+        <i class="fa-solid fa-image"></i> Photoshop 
+        <i class="fa-solid fa-caret-right" style="float:right; margin-top:5px;"></i>
+      </a>
+      <ul id="ps-menu" class="side-dropdown">
+        <li><a href="#"><i class="fa-solid fa-bolt"></i>Photo Editing</a></li>
+        <li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li>
+      </ul>
+    </li>
+
+    <li class="has-submenu"> 
+      <a href="javascript:void(0)" onclick="toggleSubMenu('pdf-menu')">
+        <i class="fa-solid fa-file-pdf"></i> Website PDF Download 
+        <i class="fa-solid fa-caret-right" style="float:right; margin-top:5px;"></i>
+      </a>
+      <ul id="pdf-menu" class="side-dropdown">
+        <li><a href="#"><i class="fa-solid fa-download"></i>Notes PDF</a></li>
+        <li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="supriya.pptx"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="ccccardc1.docx"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="science exhibition certificate.docx"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li>
+
+        <li>
+   
+  <h2>My Documents</h2>
+
+  <a href="https://naikvision.github.io/naikvision/notes.docx" download>
+    Download MS Word File
+  </a>
+ 
+</a>
+
+</li>
+
+      </ul>
+    </li>
+  </ul>
+</li>
+
+    
+
+
+
+    <li><a href="#"><i class="fa-solid fa-gear"></i>services▾</a>
+  <ul>
+    <li class="has-submenu"> 
+      <a href="javascript:void(0)" onclick="toggleSubMenu('service-tip')">
+        <i class="fa-solid fa-play-circle"></i> services tip 
+        <i class="fa-solid fa-caret-right" style="float:right; margin-top:5px;"></i>
+      </a>
+      <ul id="service-tip" class="side-dropdown">
+        <li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li>
+        <li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li>
+      </ul>
+    </li>
+
+    <li class="has-submenu"> 
+      <a href="javascript:void(0)" onclick="toggleSubMenu('ai-promt')">
+        <i class="fa-solid fa-file-word"></i> ai promt 
+        <i class="fa-solid fa-caret-right" style="float:right; margin-top:5px;"></i>
+      </a>
+      <ul id="ai-promt" class="side-dropdown">
+        <li><a href="#"><i class="fa-solid fa-bolt"></i>Word Tutorial 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li>
+      </ul>
+    </li>
+
+    <li class="has-submenu"> 
+      <a href="javascript:void(0)" onclick="toggleSubMenu('power-templet')">
+        <i class="fa-solid fa-file-excel"></i> power point templet 
+        <i class="fa-solid fa-caret-right" style="float:right; margin-top:5px;"></i>
+      </a>
+      <ul id="power-templet" class="side-dropdown">
+        <li><a href="#"><i class="fa-solid fa-bolt"></i>Excel Formulas</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li>
+      </ul>
+    </li>
+
+    <li class="has-submenu"> 
+      <a href="javascript:void(0)" onclick="toggleSubMenu('word-templet')">
+        <i class="fa-solid fa-file-powerpoint"></i> ms word templet 
+        <i class="fa-solid fa-caret-right" style="float:right; margin-top:5px;"></i>
+      </a>
+      <ul id="word-templet" class="side-dropdown">
+        <li><a href="#"><i class="fa-solid fa-bolt"></i>PPT Design</a></li>
+        <li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li>
+      </ul>
+    </li>
+
+    <li class="has-submenu"> 
+      <a href="javascript:void(0)" onclick="toggleSubMenu('photo-toturial')">
+        <i class="fa-solid fa-image"></i> Photoshop 
+        <i class="fa-solid fa-caret-right" style="float:right; margin-top:5px;"></i>
+      </a>
+      <ul id="photo-toturial" class="side-dropdown">
+        <li><a href="#"><i class="fa-solid fa-bolt"></i>Photo Editing</a></li>
+        <li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li>
+      </ul>
+    </li>
+
+    <li class="has-submenu"> 
+      <a href="javascript:void(0)" onclick="toggleSubMenu('icard-templet')">
+        <i class="fa-solid fa-file-pdf"></i> i card templet 
+        <i class="fa-solid fa-caret-right" style="float:right; margin-top:5px;"></i>
+      </a>
+      <ul id="icard-templet" class="side-dropdown">
+        <li><a href="#"><i class="fa-solid fa-download"></i>Notes PDF</a></li>
+        <li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li>
+      </ul>
+    </li>
+  </ul>
+</li>
+
+
+        <ul>
+            <li style="position: relative;"> <a href="javascript:void(0)" onclick="toggleGeneralShorts()">
+         <ul id="general-shorts-menu"></i>ms word shortcut</a></li>
+                </ul>
+            </li>
+          </i></a></li>
+          </ul>
+        </li>
+    
+
+
+          <li><a href="#"><i class="fa-solid fa-laptop-code icon "></i>software▾ </a>
+  <ul>
+    <li class="has-submenu"> 
+      <a href="javascript:void(0)" onclick="toggleSubMenu('software-guide')">
+        <i class="fa-solid fa-play-circle"></i> marg software 
+        <i class="fa-solid fa-caret-right" style="float:right; margin-top:5px;"></i>
+      </a>
+      <ul id="software-guide" class="side-dropdown">
+        <li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li>
+        <li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li>
+      </ul>
+    </li>
+
+    <li class="has-submenu"> 
+      <a href="javascript:void(0)" onclick="toggleSubMenu('ms-access')">
+        <i class="fa-solid fa-file-word"></i> ms access 
+        <i class="fa-solid fa-caret-right" style="float:right; margin-top:5px;"></i>
+      </a>
+      <ul id="ms-access" class="side-dropdown">
+        <li><a href="BOOK RECORD 2025-2026.accdb"><i class="fa-solid fa-bolt"></i>Word Tutorial 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li>
+      </ul>
+    </li>
+
+    <li class="has-submenu"> 
+      <a href="javascript:void(0)" onclick="toggleSubMenu('telly-software')">
+        <i class="fa-solid fa-file-excel"></i> telly 
+        <i class="fa-solid fa-caret-right" style="float:right; margin-top:5px;"></i>
+      </a>
+      <ul id="telly-software" class="side-dropdown">
+        <li><a href="#"><i class="fa-solid fa-bolt"></i>Excel Formulas</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li>
+      </ul>
+    </li>
+
+    <li class="has-submenu"> 
+      <a href="javascript:void(0)" onclick="toggleSubMenu('sublime-text')">
+        <i class="fa-solid fa-file-powerpoint"></i> sublime text editor 
+        <i class="fa-solid fa-caret-right" style="float:right; margin-top:5px;"></i>
+      </a>
+      <ul id="sublime-text" class="side-dropdown">
+        <li><a href="#"><i class="fa-solid fa-bolt"></i>PPT Design</a></li>
+        <li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li>
+      </ul>
+    </li>
+
+    <li class="has-submenu"> 
+      <a href="javascript:void(0)" onclick="toggleSubMenu('vn-editor')">
+        <i class="fa-solid fa-image"></i> vn editor 
+        <i class="fa-solid fa-caret-right" style="float:right; margin-top:5px;"></i>
+      </a>
+      <ul id="vn-editor" class="side-dropdown">
+        <li><a href="#"><i class="fa-solid fa-bolt"></i>Photo Editing</a></li>
+        <li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li>
+      </ul>
+    </li>
+
+    <li class="has-submenu"> 
+      <a href="javascript:void(0)" onclick="toggleSubMenu('cup-cut')">
+        <i class="fa-solid fa-file-pdf"></i> cup cut 
+        <i class="fa-solid fa-caret-right" style="float:right; margin-top:5px;"></i>
+      </a>
+      <ul id="cup-cut" class="side-dropdown">
+        <li><a href="#"><i class="fa-solid fa-download"></i>Notes PDF</a></li>
+        <li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li>
+      </ul>
+    </li>
+  </ul>
+</li>
+
+
+        <ul>
+            <li style="position: relative;"> <a href="javascript:void(0)" onclick="toggleGeneralShorts()">
+         <ul id="general-shorts-menu"></i>ms word shortcut</a></li>
+                </ul>
+            </li>
+          </i></a></li>
+          </ul>
+        </li>
+
+    
+        
+        <li><a href="#"><i class=" fa-solid fa-laptop-code icon"></i>computer ▾</a>
+  <ul>
+    <li class="has-submenu"> 
+      <a href="javascript:void(0)" onclick="toggleSubMenu('computer-guide')">
+        <i class="fa-solid fa-play-circle"></i> hardware
+        <i class="fa-solid fa-caret-right" style="float:right; margin-top:5px;"></i>
+      </a>
+      <ul id="computer-guide" class="side-dropdown">
+        <li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li>
+        <li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li>
+      </ul>
+    </li>
+
+    <li class="has-submenu"> 
+      <a href="javascript:void(0)" onclick="toggleSubMenu('netwok-internet')">
+        <i class="fa-solid fa-file-word"></i> networking 
+        <i class="fa-solid fa-caret-right" style="float:right; margin-top:5px;"></i>
+      </a>
+      <ul id="netwok-internet" class="side-dropdown">
+        <li><a href="#"><i class="fa-solid fa-bolt"></i>Word Tutorial 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li>
+      </ul>
+    </li>
+
+    <li class="has-submenu"> 
+      <a href="javascript:void(0)" onclick="toggleSubMenu('power-templet')">
+        <i class="fa-solid fa-file-excel"></i> power point templet 
+        <i class="fa-solid fa-caret-right" style="float:right; margin-top:5px;"></i>
+      </a>
+      <ul id="power-templet" class="side-dropdown">
+        <li><a href="#"><i class="fa-solid fa-bolt"></i>Excel Formulas</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li>
+      </ul>
+    </li>
+
+    <li class="has-submenu"> 
+      <a href="javascript:void(0)" onclick="toggleSubMenu('word-templet')">
+        <i class="fa-solid fa-file-powerpoint"></i> ms word templet 
+        <i class="fa-solid fa-caret-right" style="float:right; margin-top:5px;"></i>
+      </a>
+      <ul id="word-templet" class="side-dropdown">
+        <li><a href="#"><i class="fa-solid fa-bolt"></i>PPT Design</a></li>
+        <li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li>
+      </ul>
+    </li>
+
+    <li class="has-submenu"> 
+      <a href="javascript:void(0)" onclick="toggleSubMenu('photo-toturial')">
+        <i class="fa-solid fa-image"></i> Photoshop 
+        <i class="fa-solid fa-caret-right" style="float:right; margin-top:5px;"></i>
+      </a>
+      <ul id="photo-toturial" class="side-dropdown">
+        <li><a href="#"><i class="fa-solid fa-bolt"></i>Photo Editing</a></li>
+        <li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li>
+      </ul>
+    </li>
+
+    <li class="has-submenu"> 
+      <a href="javascript:void(0)" onclick="toggleSubMenu('icard-templet')">
+        <i class="fa-solid fa-file-pdf"></i> i card templet 
+        <i class="fa-solid fa-caret-right" style="float:right; margin-top:5px;"></i>
+      </a>
+      <ul id="icard-templet" class="side-dropdown">
+        <li><a href="#"><i class="fa-solid fa-download"></i>Notes PDF</a></li>
+        <li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li>
+      </ul>
+    </li>
+  </ul>
+</li>
+
+
+        <ul>
+            <li style="position: relative;"> <a href="javascript:void(0)" onclick="toggleGeneralShorts()">
+         <ul id="general-shorts-menu"></i>ms word shortcut</a></li>
+                </ul>
+            </li>
+          </i></a></li>
+          </ul>
+        </li>
+
+
+
+
+
+          <li><a href="#"><i class="fa-solid fa-book-open icon"></i>English learning▾</a>
+  <ul>
+    <li class="has-submenu"> 
+      <a href="javascript:void(0)" onclick="toggleSubMenu('larning-guide')">
+        <i class="fa-solid fa-play-circle"></i> sentences 
+        <i class="fa-solid fa-caret-right" style="float:right; margin-top:5px;"></i>
+      </a>
+      <ul id="larning-guide" class="side-dropdown">
+        <li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li>
+        <li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li>
+      </ul>
+    </li>
+
+    <li class="has-submenu"> 
+      <a href="javascript:void(0)" onclick="toggleSubMenu('englis-grammer')">
+        <i class="fa-solid fa-file-word"></i> Grammer 
+        <i class="fa-solid fa-caret-right" style="float:right; margin-top:5px;"></i>
+      </a>
+      <ul id="englis-grammer" class="side-dropdown">
+        <li><a href="#"><i class="fa-solid fa-bolt"></i>Word Tutorial 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li>
+      </ul>
+    </li>
+
+    <li class="has-submenu"> 
+      <a href="javascript:void(0)" onclick="toggleSubMenu('english-vocabulary')">
+        <i class="fa-solid fa-file-excel"></i> vocabalary 
+        <i class="fa-solid fa-caret-right" style="float:right; margin-top:5px;"></i>
+      </a>
+      <ul id="english-vocabulary" class="side-dropdown">
+        <li><a href="#"><i class="fa-solid fa-bolt"></i>Excel Formulas</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li>
+      </ul>
+    </li>
+
+    <li class="has-submenu"> 
+      <a href="javascript:void(0)" onclick="toggleSubMenu('dellyuse-sentence')">
+        <i class="fa-solid fa-file-powerpoint"></i> delly use sentence 
+        <i class="fa-solid fa-caret-right" style="float:right; margin-top:5px;"></i>
+      </a>
+      <ul id="dellyuse-sentence" class="side-dropdown">
+        <li><a href="#"><i class="fa-solid fa-bolt"></i>PPT Design</a></li>
+        <li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li>
+      </ul>
+    </li>
+
+    <li class="has-submenu"> 
+      <a href="javascript:void(0)" onclick="toggleSubMenu('dailly-speaking')">
+        <i class="fa-solid fa-image"></i> deilly speaking
+        <i class="fa-solid fa-caret-right" style="float:right; margin-top:5px;"></i>
+      </a>
+      <ul id="dailly-speaking" class="side-dropdown">
+        <li><a href="#"><i class="fa-solid fa-bolt"></i>Photo Editing</a></li>
+        <li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li>
+      </ul>
+    </li>
+
+    <li class="has-submenu"> 
+      <a href="javascript:void(0)" onclick="toggleSubMenu('english-convartion')">
+        <i class="fa-solid fa-file-pdf"></i> english-convartion 
+        <i class="fa-solid fa-caret-right" style="float:right; margin-top:5px;"></i>
+      </a>
+      <ul id="english-convartion" class="side-dropdown">
+        <li><a href="#"><i class="fa-solid fa-download"></i>Notes PDF</a></li>
+        <li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li>
+      </ul>
+    </li>
+  </ul>
+</li>
+
+
+        <ul>
+            <li style="position: relative;"> <a href="javascript:void(0)" onclick="toggleGeneralShorts()">
+         <ul id="general-shorts-menu"></i>ms word shortcut</a></li>
+                </ul>
+            </li>
+          </i></a></li>
+          </ul>
+        </li>
+
+    
+        
+        <li><a href="#"><i class="fa-solid fa-mobile-screen icon"></i>mobile▾</a>
+  <ul>
+    <li class="has-submenu"> 
+      <a href="javascript:void(0)" onclick="toggleSubMenu('mobile-menu')">
+        <i class="fa-solid fa-play-circle"></i> iphone 
+        <i class="fa-solid fa-caret-right" style="float:right; margin-top:5px;"></i>
+      </a>
+      <ul id="mobile-menu" class="side-dropdown">
+        <li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li>
+        <li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li>
+      </ul>
+    </li>
+
+    <!-- <li class="has-submenu"> 
+      <a href="javascript:void(0)" onclick="toggleSubMenu('ai-promt')">
+        <i class="fa-solid fa-file-word"></i> ai promt 
+        <i class="fa-solid fa-caret-right" style="float:right; margin-top:5px;"></i>
+      </a>
+      <ul id="ai-promt" class="side-dropdown">
+        <li><a href="#"><i class="fa-solid fa-bolt"></i>Word Tutorial 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li>
+      </ul>
+    </li> -->
+
+    <!-- <li class="has-submenu"> 
+      <a href="javascript:void(0)" onclick="toggleSubMenu('power-templet')">
+        <i class="fa-solid fa-file-excel"></i> power point templet 
+        <i class="fa-solid fa-caret-right" style="float:right; margin-top:5px;"></i>
+      </a>
+      <ul id="power-templet" class="side-dropdown">
+        <li><a href="#"><i class="fa-solid fa-bolt"></i>Excel Formulas</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li>
+      </ul>
+    </li> -->
+
+    <!-- <li class="has-submenu"> 
+      <a href="javascript:void(0)" onclick="toggleSubMenu('word-templet')">
+        <i class="fa-solid fa-file-powerpoint"></i> ms word templet 
+        <i class="fa-solid fa-caret-right" style="float:right; margin-top:5px;"></i>
+      </a>
+      <ul id="word-templet" class="side-dropdown">
+        <li><a href="#"><i class="fa-solid fa-bolt"></i>PPT Design</a></li>
+        <li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li>
+      </ul>
+    </li> -->
+
+    <!-- <li class="has-submenu"> 
+      <a href="javascript:void(0)" onclick="toggleSubMenu('photo-toturial')">
+        <i class="fa-solid fa-image"></i> Photoshop 
+        <i class="fa-solid fa-caret-right" style="float:right; margin-top:5px;"></i>
+      </a>
+      <ul id="photo-toturial" class="side-dropdown">
+        <li><a href="#"><i class="fa-solid fa-bolt"></i>Photo Editing</a></li>
+        <li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li>
+      </ul>
+    </li> -->
+
+    <<!-- li class="has-submenu"> 
+      <a href="javascript:void(0)" onclick="toggleSubMenu('icard-templet')">
+        <i class="fa-solid fa-file-pdf"></i> i card templet 
+        <i class="fa-solid fa-caret-right" style="float:right; margin-top:5px;"></i>
+      </a>
+      <ul id="icard-templet" class="side-dropdown">
+        <li><a href="#"><i class="fa-solid fa-download"></i>Notes PDF</a></li>
+        <li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li>
+      </ul>
+    </li>
+  -->
+  </ul>
+</li>
+
+
+        <ul>
+            <li style="position: relative;"> <a href="javascript:void(0)" onclick="toggleGeneralShorts()">
+         <ul id="general-shorts-menu"></i>ms word shortcut</a></li>
+                </ul>
+            </li>
+          </i></a></li>
+          </ul>
+        </li>
+
+         
+          <li><a href="#"><i class="fa-solid fa-print icon"></i>printer▾</a>
+  <ul>
+
+    <li class="has-submenu"> 
+      <a href="javascript:void(0)" onclick="toggleSubMenu('printer setting')">
+        <i class="fa-solid fa-play-circle"></i> printer setting 
+        <i class="fa-solid fa-caret-right" style="float:right; margin-top:5px;"></i>
+      </a>
+      <ul id="printer setting" class="side-dropdown">
+        <li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li>
+        <li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li>
+      </ul>
+    </li>
+
+    <li class="has-submenu"> 
+      <a href="javascript:void(0)" onclick="toggleSubMenu('page-setup')">
+        <i class="fa-solid fa-file-word"></i> page setup 
+        <i class="fa-solid fa-caret-right" style="float:right; margin-top:5px;"></i>
+      </a>
+      <ul id="page-setup" class="side-dropdown">
+        <li><a href="#"><i class="fa-solid fa-bolt"></i>Word Tutorial 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li>
+      </ul>
+    </li>
+
+    <li class="has-submenu"> 
+      <a href="javascript:void(0)" onclick="toggleSubMenu('printer-properities')">
+        <i class="fa-solid fa-file-excel"></i> printer-properities 
+        <i class="fa-solid fa-caret-right" style="float:right; margin-top:5px;"></i>
+      </a>
+      <ul id="printer-properities" class="side-dropdown">
+        <li><a href="#"><i class="fa-solid fa-bolt"></i>Excel Formulas</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li>
+      </ul>
+    </li>
+
+    <li class="has-submenu"> 
+      <a href="javascript:void(0)" onclick="toggleSubMenu('printer-maintenance')">
+        <i class="fa-solid fa-file-powerpoint"></i> printer-maintenance 
+        <i class="fa-solid fa-caret-right" style="float:right; margin-top:5px;"></i>
+      </a>
+      <ul id="printer-maintenance" class="side-dropdown">
+        <li><a href="#"><i class="fa-solid fa-bolt"></i>PPT Design</a></li>
+        <li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li>
+      </ul>
+    </li>
+
+    <li class="has-submenu"> 
+      <a href="javascript:void(0)" onclick="toggleSubMenu('document-seane')">
+        <i class="fa-solid fa-image"></i> document seane
+        <i class="fa-solid fa-caret-right" style="float:right; margin-top:5px;"></i>
+      </a>
+      <ul id="document-seane" class="side-dropdown">
+        <li><a href="#"><i class="fa-solid fa-bolt"></i>Photo Editing</a></li>
+        <li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li>
+      </ul>
+    </li>        
+
+             <li class="has-submenu"> 
+      <a href="javascript:void(0)" onclick="toggleSubMenu('reset-printer')">
+        <i class="fa-solid fa-image"></i> Reset printer
+        <i class="fa-solid fa-caret-right" style="float:right; margin-top:5px;"></i>
+      </a>
+      <ul id="reset-printer" class="side-dropdown">
+        <li><a href="#"><i class="fa-solid fa-bolt"></i>Photo Editing</a></li>
+        <li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li>
+      </ul>
+    </li>
+
+
+    <li class="has-submenu"> 
+      <a href="javascript:void(0)" onclick="toggleSubMenu('printer-problem')">
+        <i class="fa-solid fa-file-pdf"></i> printer problem
+        <i class="fa-solid fa-caret-right" style="float:right; margin-top:5px;"></i>
+      </a>
+      <ul id="printer-problem" class="side-dropdown">
+        <li><a href="#"><i class="fa-solid fa-download"></i>Notes PDF</a></li>
+        <li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li>
+      </ul>
+    </li>
+             
+  </ul>
+</li>      
+
+
+
+        <ul>
+            <li style="position: relative;"> <a href="javascript:void(0)" onclick="toggleGeneralShorts()">
+         <ul id="general-shorts-menu"></i>ms word shortcut</a></li>
+                </ul>
+            </li>
+          </i></a></li>
+          </ul>
+        </li>
+
+    
+        
+        <li><a href="#"><i class="a-solid fa-address-book icon"></i>contact▾</a>
+  <ul>
+
+    <!-- <li class="has-submenu"> 
+      <a href="javascript:void(0)" onclick="toggleSubMenu('contact-details')">
+        <i class="fa-solid fa-play-circle"></i> Email 
+        <i class="fa-solid fa-caret-right" style="float:right; margin-top:5px;"></i>
+      </a>
+      <ul id="contact-details" class="side-dropdown">
+        <li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li>
+        <li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li>
+      </ul>
+    </li>
+ -->
+    <!-- <li class="has-submenu"> 
+      <a href="javascript:void(0)" onclick="toggleSubMenu('instagram-details')">
+        <i class="fa-solid fa-file-word"></i> instagram 
+        <i class="fa-solid fa-caret-right" style="float:right; margin-top:5px;"></i>
+      </a>
+      <ul id="instagram-details" class="side-dropdown">
+        <li><a href="#"><i class="fa-solid fa-bolt"></i>Word Tutorial 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li><li><a href="#"><i class="fa-solid fa-bolt"></i>Short Video 1</a></li>
+      </ul>
+    </li> -->
+
+    <li class="has-submenu"> 
+      <a href="javascript:void(0)" onclick="toggleSubMenu('facebook-details')">
+        <i class="fa-solid fa-envelope"></i> Send Email  
+        <i class="fa-solid fa-caret-right" style="float:right; margin-top:5px;"></i>
+      </a>
+      <ul id="facebook-details" class="side-dropdown">
+
+
+
+         <div> 
+           <section id="contact">
+  <h2>Contact Us</h2>
+
+  <form action="avianshnaik7262@gmail.com" method="POST">
+    
+    <input type="text" name="name" placeholder="Your Name" required>
+    
+    <input type="email" name="email" placeholder="Your Email" required>
+    
+    <textarea name="message" placeholder="Your Message" required></textarea>
+
+    <!-- Optional Settings -->
+    <input type="hidden" name="_subject" value="New Contact Form Message">
+    <input type="hidden" name="_captcha" value="false">
+
+    <button type="submit">Send Message</button>
+  </form>
+</section>
+
+         </div>
+
+      </ul>
+    </li>
+
+    
+
+    
+      
+
+    
+    </li>
+  </ul>
+</li>
+
+
+        <ul>
+            <li style="position: relative;"> <a href="javascript:void(0)" onclick="toggleGeneralShorts()">
+         <ul id="general-shorts-menu"></i>ms word shortcut</a></li>
+                </ul>
+            </li>
+          </i></a></li>
+          </ul>
+        </li>
+
+
+
+
+        
+        
+        
+          
+        </li>
+        <li><a href="#"><i class="fa-solid fa-brain"></i>AI Tools▾</a>
+          <ul>
+            <li><a href="https://zapier.com/blog/how-to-use-chatgpt/" target="_blank"><i class="fa-solid fa-robot"></i>ChatGPT</a></li>
+            <li><a href="https://www.zdnet.com/article/what-is-google-gemini/" target="_blank"><i class="fa-solid fa-gem"></i>Gemini</a></li>
+            <li><a href="https://www.digitaltrends.com/computing/how-to-use-midjourney/" target="_blank"><i class="fa-solid fa-image-portrait"></i>Midjourney</a></li>
+            <li><a href="https://www.adobe.com/products/firefly.html" target="_blank"><i class="fa-solid fa-wand-magic-sparkles"></i>Adobe Firefly</a></li>
+            <li><a href="https://www.heygen.com/blog/ai-video-generation" target="_blank"><i class="fa-solid fa-video"></i>Heygen</a></li>
+            <li><a href="https://invideo.io/blog/ai-video-generator/" target="_blank"><i class="fa-solid fa-clapperboard"></i>Invideo AI</a></li>
+          </ul>
+        </li>
+        <li><a href="#"><i class="fa-solid fa-building-columns"></i>Govt Web▾</a>
+          <ul>
+            <li><a href="https://udiseplus.gov.in/" target="_blank"><i class="fa-solid fa-graduation-cap"></i>UDISE+</a></li>
+            <li><a href="https://www.digitalindia.gov.in/" target="_blank"><i class="fa-solid fa-globe"></i>Digital India</a></li>
+            <li><a href="https://www.mygov.in/" target="_blank"><i class="fa-solid fa-people-group"></i>MyGov</a></li>
+            <li><a href="https://www.india.gov.in/" target="_blank"><i class="fa-solid fa-flag"></i>India.gov.in</a></li>
+            <li><a href="https://www.pmindia.gov.in/" target="_blank"><i class="fa-solid fa-user-tie"></i>PM India</a></li>
+            <li><a href="https://scholarships.gov.in/" target="_blank"><i class="fa-solid fa-hand-holding-dollar"></i>National Scholarship Portal</a></li>
+          </ul>
+        </li>
+        <li><a href="#"><i class="fa-solid fa-blog"></i>Blog▾</a>
+          <ul>
+            <li><a href="#"><i class="fa-solid fa-newspaper"></i>Education</a></li>
+            <li><a href="#"><i class="fa-solid fa-bullhorn"></i>News</a></li>
+            <li><a href="#"><i class="fa-solid fa-football"></i>Sport</a></li>
+            <li><a href="#"><i class="fa-solid fa-leaf"></i>Ayurved</a></li>
+            <li><a href="#"><i class="fa-solid fa-apple-whole"></i>Food & Health</a></li>
+            <li><a href="#"><i class="fa-solid fa-landmark"></i>Politics</a></li>
+            <li><a href="#"><i class="fa-solid fa-flask"></i>Science</a></li>
+            <li><a href="#"><i class="fa-solid fa-shirt"></i>Fashion</a></li>
+            <li><a href="#"><i class="fa-solid fa-dumbbell"></i>Fitness</a></li>
+          </ul>
+        </li>
+        <li><a href="#"><i class="fa-solid fa-language"></i>Language▾</a>
+          <ul>
+            <li><a href="#"><i class="fa-solid fa-flag-usa"></i>English</a></li>
+            <li><a href="#"><i class="fa-solid fa-om"></i>Hindi</a></li>
+            <li><a href="#"><i class="fa-solid fa-m"></i>Marathi</a></li>
+            <li><a href="#"><i class="fa-solid fa-g"></i>Gujarati</a></li>
+          </ul>
+        </li>
+        <div class="navbar">
+    <a onclick="toggleDropdown()"><i class="fa-solid fa-images gallery-icon"></i>Photo Gallery ▾</a>
+
+    <div class="dropdown" id="dropdownMenu">
+        <a onclick="showPhotos()">Photo Album</a>
+        <a onclick="showVideos()">Video Album</a>
+    </div>
+</div>
+
+<!-- Side Panel -->
+<div id="sidePanel" class="side-panel">
+    <button class="close-btn" onclick="closeGallery()">✖ Close</button>
+
+    <div id="photoAlbum" class="gallery">
+        <img src="https://picsum.photos/400/300?random=1">
+        <img src="https://picsum.photos/400/300?random=2">
+        <img src="https://picsum.photos/400/300?random=3">
+        <img src="https://picsum.photos/400/300?random=4">
+        <img src="https://picsum.photos/400/300?random=5">
+        <img src="https://picsum.photos/400/300?random=6">
+        <img src="https://picsum.photos/400/300?random=7">
+        <img src="https://picsum.photos/400/300?random=8">
+        <img src="https://picsum.photos/400/300?random=9">
+        <img src="https://picsum.photos/400/300?random=10">
+    </div>
+
+    <div id="videoAlbum" class="gallery">
+        <video controls src="https://www.w3schools.com/html/mov_bbb.mp4"></video>
+        <video controls src="https://www.w3schools.com/html/movie.mp4"></video>
+        <video controls src="https://www.w3schools.com/html/mov_bbb.mp4"></video>
+        <video controls src="https://www.w3schools.com/html/movie.mp4"></video>
+        <video controls src="https://www.w3schools.com/html/mov_bbb.mp4"></video>
+        <video controls src="https://www.w3schools.com/html/movie.mp4"></video>
+        <video controls src="https://www.w3schools.com/html/mov_bbb.mp4"></video>
+        <video controls src="https://www.w3schools.com/html/movie.mp4"></video>
+        <video controls src="https://www.w3schools.com/html/mov_bbb.mp4"></video>
+        <video controls src="https://www.w3schools.com/html/movie.mp4"></video>
+    </div>
+</div>
+          
+      </ul>
+    </nav>
+       
+         
+    <div class="search-login   " >
+      <form class="google-search" action="https://www.google.com/search" method="GET" target="_blank">
+        <input type="text" name="q" placeholder="Google Search..." required>
+        <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+      </form>
+      
+      
+       <!--  <button onclick="openModal('loginModal')">Login</button>
+      <button onclick="openModal('signupModal')">Sign Up</button> -->
+
+    <!-- LOGIN & SIGNUP BUTTONS -->
+<button onclick="openModal('loginModal')">Login</button>
+<button onclick="openModal('signupModal')">Sign Up</button>
+
+<!-- LOGIN MODAL -->
+<div id="loginModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('loginModal')">&times;</span>
+    <h2>Login</h2>
+    <form onsubmit="loginUser(event)">
+      <input type="email" id="loginEmail" placeholder="Email" required>
+      <input type="password" id="loginPassword" placeholder="Password" required>
+      <button type="submit">Login</button>
+    </form>
+  </div>
+</div>
+
+<!-- SIGNUP MODAL -->
+<div id="signupModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('signupModal')">&times;</span>
+    <h2>Sign Up</h2>
+    <form onsubmit="signupUser(event)">
+      <input type="email" id="signupEmail" placeholder="Email" required>
+      <input type="password" id="signupPassword" placeholder="Password" required>
+      <input type="password" id="confirmPassword" placeholder="Confirm Password" required>
+      <button type="submit">Sign Up</button>
+    </form>
+  </div>
+</div>
+
+
+
+    </div>
+
+  </header>
+
+  <div class="animated-line"></div>
+
+  <div id="loginModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('loginModal')">×</span>
+      <h2>Login</h2>
+      <form>
+        <input type="email" placeholder="Email" required>
+        <input type="password" placeholder="Password" required>
+        <button type="submit">Login</button>
+      </form>
+      <div class="switch-form">
+        <p>Don't have an account? <a href="#" onclick="switchModal('loginModal', 'signupModal')">Sign Up</a></p>
+      </div>
+    </div>
+  </div>
+
+  <div id="signupModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('signupModal')">×</span>
+      <h2>Sign Up</h2>
+      <form>
+        <input type="text" placeholder="Full Name" required>
+        <input type="email" placeholder="Email" required>
+        <input type="password" placeholder="Password" required>
+        <input type="password" placeholder="Confirm Password" required>
+        <button type="submit">Sign Up</button>
+      </form>
+      <div class="switch-form">
+        <p>Already have an account? <a href="#" onclick="switchModal('signupModal', 'loginModal')">Login</a></p>
+      </div>
+    </div>
+  </div> 
+  
+ 
+  <main id="content">
+    <h1>Welcome to Naikvision</h1>
+    <p>Learn Computer & Software skills with Naikvision YouTube tutorials.</p>
+  </main>
+     
+  <section class="gallery-section" id="gallery">
+    <h2>📸 Photo Gallery</h2>
+    <div class="gallery-grid">
+      <div class="gallery-item"><img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=800&q=80" alt="Classroom"><div class="caption">Computer Classroom Session</div></div>
+      <div class="gallery-item"><img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&q=80" alt="Students"><div class="caption">Happy Students Learning</div></div>
+      <div class="gallery-item"><img src="https://images.unsplash.com/photo-1587620962725-abab7fe55159?auto=format&fit=crop&w=800&q=80" alt="Coding"><div class="caption">Hands-on Coding Practice</div></div>
+      <div class="gallery-item"><img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=800&q=80" alt="Certificate"><div class="caption">Certificate Distribution</div></div>
+      <div class="gallery-item"><img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=800&q=80" alt="Workshop"><div class="caption">Software Workshop</div></div>
+      <div class="gallery-item"><img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=800&q=80" alt="Group"><div class="caption">Group Project Presentation</div></div>
+    </div>
+  </section>
+
+  <!-- <section class="contact-section" id="contact">
+    <h2>📞 Contact Us</h2>
+    <div class="contact-info">
+      <p><b>Email:</b> <a href="mailto:naikclasses7@gmail.com">naikclasses7@gmail.com</a></p>
+      <p><b>Phone:</b> <a href="tel:+918766086767">+91 8766086767</a></p>
+      <p><b>Location:</b> Nandurbar (Akkalkuwa), Maharashtra, India</p>
+    </div>
+    <div class="contact-form">
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea rows="4" placeholder="Your Message" required></textarea>
+      <button>Send Message</button>
+    </div>
+    <div class="map-container">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14848.16335123456!2d74.0!3d21.0!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjHCsDAwJzAwLjAiTiA3NMKwMDAnMDAuMCJF!5e0!3m2!1sen!2sin!4v123456789" loading="lazy" allowfullscreen></iframe>
+    </div>
+  </section> -->
+
+  
+
+
+
+
+
+
+
+  <section class="luxury-video-strip">
+
+  <div class="luxury-track">
+
+    <a href="https://youtu.be/NjO7-QUi4gQ" target="_blank">
+      <div class="luxury-box">
+         <img src="https://youtu.be/NjO7-QUi4gQ/hqdefault.jpg">
+      </div>
+    </a>
+
+   </a>
+
+   
+
+    
+    <!-- Duplicate for smooth loop -->
+   
+     
+
+
+
+    <a href="https://youtu.be/NjO7-QUi4gQ" target="_blank">
+      <div class="luxury-box">
+         <img src="https://youtu.be/NjO7-QUi4gQ/hqdefault.jpg">
+      </div>
+    </a>
+    <a href="https://www.youtube.com/watch?v=l482T0yNkeo" target="_blank">
+      <div class="luxury-box">
+         <img src="https://img.youtube.com/vi/l482T0yNkeo/hqdefault.jpg">
+      </div>
+    </a>
+ <a href="https://www.youtube.com/watch?v=l482T0yNkeo" target="_blank">
+      <div class="luxury-box">
+         <img src="https://img.youtube.com/vi/l482T0yNkeo/hqdefault.jpg">
+      </div>
+    </a>
+ <a href="https://www.youtube.com/watch?v=l482T0yNkeo" target="_blank">
+      <div class="luxury-box">
+         <img src="https://img.youtube.com/vi/l482T0yNkeo/hqdefault.jpg">
+      </div>
+    </a>
+ <a href="https://www.youtube.com/watch?v=l482T0yNkeo" target="_blank">
+      <div class="luxury-box">
+         <img src="https://img.youtube.com/vi/l482T0yNkeo/hqdefault.jpg">
+      </div>
+    </a>
+
+  
+  
+
+
+  
+   
+  </div>
+
+    
+</section>
+
+  <footer class="footer">
+   <div class="ticker">
+      <div class="ticker-text">
+        Premium Website ✦ 24/7 Support ✦ Fast respon ✦ Professional Service ✦
+      </div>
+    </div>
+
+  <!-- Image Slider -->
+  <!-- <div class="slider">
+    <img src="https://picsum.photos/300/200?ps=1" class="slide active">
+    <img src="https://picsum.photos/300/200?ps=1" class="slide">
+    
+  </div>
+ -->
+    <!--  <div class="slider">
+    <img src="ChatGPT Image Feb 17, 2026, 07_04_05 PM.png" class="active">
+    <img src="images.png">
+    <img src="20.02.2026_21.07.05_REC.png">
+    <img src="Photoshop.jpg">
+    <img src="Printer.jpg">
+    <img src="Mobile.jpg">
+
+    <div>
+        <button onclick="prev()">◀ Prev</button>
+        <button onclick="next()">Next ▶</button>
+    </div>
+</div>
+   -->
+  
+    <!-- Site Map -->
+    <!-- <div class="footer-box">
+      <h3>Site Map</h3>
+      <ul>
+        <li><a href="#">Articles</a></li>
+        <li><a href="#">Gallery</a></li>
+        <li><a href="#">Latest News</a></li>
+        <li><a href="#">Blog</a></li>
+      </ul>
+    </div> -->
+
+    
+
+  <div class="footer-bottom">
+    
+  </div>
+  <footer class="pro-footer">
+
+  <div class="footer-wrapper">
+
+    <!-- FAQ Section -->
+    <div class="footer-faq">
+      <h3>FQAs</h3>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          What services do you provide?
+          <span class="icon">+</span>
+        </button>
+        <div class="faq-answer">
+          We provide digital education, technical tutorials, creative learning resources, and professional guidance.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          Is the content free to use?
+          <span class="icon">+</span>
+        </button>
+        <div class="faq-answer">
+          Yes, most content is free. Some premium learning resources may require registration.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          How can I contact support?
+          <span class="icon">+</span>
+        </button>
+        <div class="faq-answer">
+          You can contact us through the Contact page or email. Response time is within 24–48 hours.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          Is your content updated regularly?
+          <span class="icon">+</span>
+        </button>
+        <div class="faq-answer">
+          Yes, we regularly update our content to maintain accuracy and quality.
+        </div>
+      </div>
+    </div>
+
+         <!-- Contact Us -->
+    <div class="footer-box">
+      <h3>Contact Us</h3>
+      <p>Email: naikvision99@gmail.com</p>
+      <p>Phone: +91 8766086767</p>
+
+      <div class="social-icons">
+        <a href="https://www.youtube.com/@naikvision-99" target="_blank"><i class="fab fa-youtube"></i></a>
+        <a href="https://www.facebook.com/share/1GVQTHu6as/?mibextid=wwXIfr" target="_blank"><i class="fab fa-facebook"></i></a>
+        <a href="https://twitter.com" target="_blank"><i class="fab fa-x-twitter"></i></a>
+        <a href="https://www.instagram.com/naikvision_?" target="_blank"><i class="fab fa-instagram"></i></a>
+
+        <a href="https://wa.me/+918766086767" target="_blank">
+  <i class="fab fa-whatsapp" style="font-size:24px; color:#25D366;"></i>
+</a>
+         
+    </div>
+
+  </div>
+      
+
+  <div class="footer-bottom">
+    © 2026 Your Website Name | All Rights Reserved
+  </div>
+
+</footer>
+
+      
+</footer>
+     
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  <script>
+    function toggleMenu() {
+      document.getElementById('navbar').classList.toggle('active');
+    }
+    
+    function toggleSubMenu(menuId) {
+  // Pehle check karein ki menu khula hai ya nahi
+  var currentMenu = document.getElementById(menuId);
+  var isOpen = currentMenu.style.display === 'block';
+
+  // Sabhi dropdowns ko pehle band kar dein (taki ek waqt mein ek hi khule)
+  document.querySelectorAll('.side-dropdown').forEach(function(m) {
+    m.style.display = 'none';
+  });
+
+  // Agar pehle band tha, toh ab khol dein
+  if (!isOpen) {
+    currentMenu.style.display = 'block';
+  }
+}
+
+// Mobile menu toggle logic
+function toggleMenu() {
+  document.getElementById('navbar').classList.toggle('active');
+}
+
+    function openModal(modalId) {
+      document.getElementById(modalId).style.display = 'flex';
+    }
+    function closeModal(modalId) {
+      document.getElementById(modalId).style.display = 'none';
+    }
+    function switchModal(closeId, openId) {
+      closeModal(closeId);
+      openModal(openId);
+    }
+    window.onclick = function(event) {
+      if (event.target.classList.contains('modal')) {
+        closeModal('loginModal');
+        closeModal('signupModal');
+      }
+    }
+  </script>
+<script>
+  // 🔥 AUTO APPLY SAME SHORTS LINK LOGIC
+  document.querySelectorAll('#general-shorts-menu a').forEach(function(link) {
+    link.addEventListener('click', function(e) {
+      // agar blank ya dummy ID ho to bhi kaam kare
+      if (this.href.includes('YOUR_VIDEO_ID')) {
+        e.preventDefault();
+        alert('Yahan apna YouTube Shorts Video ID daalo');
+      }
+    });
+  });
+    // 🔥 AUTO APPLY SAME SHORTS LINK LOGIC
+  document.querySelectorAll('#service-tip-shorts-menu a').forEach(function(link) {
+    link.addEventListener('click', function(e) {
+      // agar blank ya dummy ID ho to bhi kaam kare
+      if (this.href.includes('YOUR_VIDEO_ID')) {
+        e.preventDefault();
+        alert('Yahan apna YouTube Shorts Video ID daalo');
+      }
+    });
+  });
+
+     // 🔥 AUTO APPLY SAME SHORTS LINK LOGIC
+     document.querySelectorAll('#software-guide-shorts-menu a').forEach(function(link) {
+      link.addEventListener('click', function(e) {
+      // agar blank ya dummy ID ho to bhi kaam kare
+      if (this.href.includes('YOUR_VIDEO_ID')) {
+        e.preventDefault();
+        alert('Yahan apna YouTube Shorts Video ID daalo');
+      }
+    });
+  });
+         
+         // 🔥 AUTO APPLY SAME SHORTS LINK LOGIC
+     document.querySelectorAll('#computer-guide-shorts-menu a').forEach(function(link) {
+      link.addEventListener('click', function(e) {
+      // agar blank ya dummy ID ho to bhi kaam kare
+      if (this.href.includes('YOUR_VIDEO_ID')) {
+        e.preventDefault();
+        alert('Yahan apna YouTube Shorts Video ID daalo');
+      }
+    });
+  });
+      // 🔥 AUTO APPLY SAME SHORTS LINK LOGIC
+     document.querySelectorAll('#larning-guide-shorts-menu a').forEach(function(link) {
+      link.addEventListener('click', function(e) {
+      // agar blank ya dummy ID ho to bhi kaam kare
+      if (this.href.includes('YOUR_VIDEO_ID')) {
+        e.preventDefault();
+        alert('Yahan apna YouTube Shorts Video ID daalo');
+      }
+    });
+  });
+          // 🔥 AUTO APPLY SAME SHORTS LINK LOGIC
+     document.querySelectorAll('#printer setting-shorts-menu a').forEach(function(link) {
+      link.addEventListener('click', function(e) {
+      // agar blank ya dummy ID ho to bhi kaam kare
+      if (this.href.includes('YOUR_VIDEO_ID')) {
+        e.preventDefault();
+        alert('Yahan apna YouTube Shorts Video ID daalo');
+      }
+    });
+  });      
+         // 🔥 AUTO APPLY SAME SHORTS LINK LOGIC
+     document.querySelectorAll('#contact-details-shorts-menu a').forEach(function(link) {
+      link.addEventListener('click', function(e) {
+      // agar blank ya dummy ID ho to bhi kaam kare
+      if (this.href.includes('YOUR_VIDEO_ID')) {
+        e.preventDefault();
+        alert('Yahan apna YouTube Shorts Video ID daalo');
+      }
+    });
+  });
+          
+
+  function toggleSubMenu(menuId) {
+  // Pehle check karein ki menu khula hai ya nahi
+  var currentMenu = document.getElementById(menuId);
+  var isOpen = currentMenu.style.display === 'block';
+
+  // Sabhi dropdowns ko pehle band kar dein (taki ek waqt mein ek hi khule)
+  document.querySelectorAll('.side-dropdown').forEach(function(m) {
+    m.style.display = 'none';
+  });
+
+  // Agar pehle band tha, toh ab khol dein
+  if (!isOpen) {
+    currentMenu.style.display = 'block';
+  }
+}
+
+// Mobile menu toggle logic
+function toggleMenu() {
+  document.getElementById('navbar').classList.toggle('active');
+}
+</script>
+
+
+
+   
+
+ 
+</script>
+  
+
+
+
+<script>
+async function send() {
+  const message = document.getElementById("msg").value;
+
+  const res = await fetch("https://ai-chatbot.wardhamanpschool.workers.dev", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ message })
+  });
+
+  const data = await res.json();
+  document.getElementById("reply").innerText = data.reply;
+}
+
+   function toggleDropdown(){
+    var menu = document.getElementById("dropdownMenu");
+    menu.style.display = menu.style.display === "block" ? "none" : "block";
+}
+
+function showPhotos(){
+    document.getElementById("sidePanel").style.right = "0";
+    document.getElementById("photoAlbum").style.display="grid";
+    document.getElementById("videoAlbum").style.display="none";
+    document.getElementById("dropdownMenu").style.display="none";
+}
+
+function showVideos(){
+    document.getElementById("sidePanel").style.right = "0";
+    document.getElementById("videoAlbum").style.display="grid";
+    document.getElementById("photoAlbum").style.display="none";
+    document.getElementById("dropdownMenu").style.display="none";
+}
+
+function closeGallery(){
+    document.getElementById("sidePanel").style.right = "-100%";
+}
+
+</script>
+
+
+  <script>
+function sendEmail() {
+  var name = document.getElementById("name").value;
+  var message = document.getElementById("message").value;
+
+  var mailtoLink = "mailto:example@gmail.com"
+    + "?subject=Contact Form Submission"
+    + "&body=Name: " + encodeURIComponent(name)
+    + "%0A%0AMessage: " + encodeURIComponent(message);
+
+  window.location.href = mailtoLink;
+}
+   
+   <script>
+let index = 0;
+let images = document.querySelectorAll(".slider img");
+
+function showImage(i){
+    images.forEach(img => img.classList.remove("active"));
+    images[i].classList.add("active");
+}
+
+function next(){
+    index = (index + 1) % images.length;
+    showImage(index);
+}
+
+function prev(){
+    index = (index - 1 + images.length) % images.length;
+    showImage(index);
+}
+
+// 🔁 AUTO SLIDE every 5 seconds
+setInterval(next, 5000);
+</script>
+<script>
+  document.querySelectorAll(".faq-question").forEach(button => {
+    button.addEventListener("click", () => {
+      const answer = button.nextElementSibling;
+      const icon = button.querySelector(".icon");
+
+      const open = answer.style.display === "block";
+
+      document.querySelectorAll(".faq-answer").forEach(a => a.style.display = "none");
+      document.querySelectorAll(".icon").forEach(i => i.textContent = "+");
+
+      if (!open) {
+        answer.style.display = "block";
+        icon.textContent = "−";
+      }
+    });
+  });
+</script>
+ 
+
+     <script>
+function openModal(id){
+  document.getElementById(id).style.display="flex";
+}
+function closeModal(id){
+  document.getElementById(id).style.display="none";
+}
+</script>
+
+<!-- FIREBASE SCRIPT -->
+<script type="module">
+
+const firebaseConfig = {
+  apiKey: "AIzaSyDe-o88EL9Hx05c40FyMlFo9MiRbEsCXM",
+  authDomain: "naikvision-login.firebaseapp.com",
+  projectId: "naikvision-login",
+  storageBucket: "naikvision-login.appspot.com",
+  messagingSenderId: "589102069083",
+  appId: "1:589102069083:web:ada0fb358af2e11a13567e"
+};
+
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
+
+window.signupUser = function(event){
+  event.preventDefault();
+  const email = document.getElementById("signupEmail").value;
+  const password = document.getElementById("signupPassword").value;
+  const confirm = document.getElementById("confirmPassword").value;
+
+  if(password !== confirm){
+    alert("Passwords do not match");
+    return;
+  }
+
+  createUserWithEmailAndPassword(auth, email, password)
+  .then(()=> {
+    alert("Signup Successful");
+    closeModal("signupModal");
+  })
+  .catch(error => alert(error.message));
+}
+
+window.loginUser = function(event){
+  event.preventDefault();
+  const email = document.getElementById("loginEmail").value;
+  const password = document.getElementById("loginPassword").value;
+
+  signInWithEmailAndPassword(auth, email, password)
+  .then(()=> {
+    alert("Login Successful");
+    closeModal("loginModal");
+  })
+  .catch(error => alert(error.message));
+}
+</script>
+
+</script>
+
+
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
